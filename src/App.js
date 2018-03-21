@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import PlayQueue from './components/PlayQueue';
 import CurrentSong from './components/CurrentSong';
+import PlayQueue from './components/PlayQueue';
 import MusicPlayer from './components/MusicPlayer';
 
 import './App.css';
@@ -13,8 +13,8 @@ class App extends Component {
           <h1 className="App-title">Music Player</h1>
         </header>
         <main className="App-intro">
-          <PlayQueue />
           <CurrentSong />
+          <PlayQueue />
           <MusicPlayer />
         </main>
       </div>
