@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import PlayQueue from './components/PlayQueue';
-import CurrentSong from './components/CurrentSong';
 import MusicPlayer from './components/MusicPlayer';
 
 import './App.css';
 
 class App extends Component {
+  
+  componentDidMount() {
+    // if (props.currentSong) {
+    //   const index = props.songs.find(i => i.id === props.currentSong);
+    // }
+  }
+
+  onMusicSelected(songId) {
+    console.log('music selected');
+  } 
+  
   render() {
     return (
       <div className="App">
@@ -14,7 +24,6 @@ class App extends Component {
         </header>
         <main className="App-intro">
           <PlayQueue />
-          <CurrentSong />
           <MusicPlayer />
         </main>
       </div>
