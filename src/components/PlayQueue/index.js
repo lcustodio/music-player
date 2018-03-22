@@ -1,16 +1,20 @@
 import React from 'react';
+import './index.css';
 
-const PlayerQueue = props => {
+const PlayQueue = props => {
   if (!props.songs || props.songs.length === 0) {
-    return <p>No musics to be player - sad</p>;
+    return ( 
+      <div className="PlayQueue">
+        No musics to be player - sad
+    </div>);
   }
 
   return props.songs.map(song => (
-    <div onClick={() => props.onMusicSelected(song.id)}>
+    <div className="PlayQueue" onClick={() => props.onMusicSelected(song.id)}>
       <div>{song.title}</div>
       <div>{song.artist}</div>
       <div>{song.album}</div>
     </div>
   ));
 };
-export default PlayerQueue;
+export default PlayQueue;

@@ -1,14 +1,17 @@
 import React from 'react';
+import './index.css';
 
 const CurrentSong = props =>
   props.song ? (
-    <div>
+    <div className="CurrentSong">
       <div>{props.song.title}</div>
       <div>{props.song.artist}</div>
       <div>{props.song.album}</div>
     </div>
   ) : (
-    <p>No music is playing</p>
+    <div className="CurrentSong">
+      <p>No music playing</p>
+    </div>
   );
 
 export default CurrentSong;

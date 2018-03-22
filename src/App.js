@@ -10,9 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Music Player</h1>
+          <div className="App-title">Music Player</div>
         </header>
-        <main className="App-intro">
+        <main className="App-container">
           <CurrentSong />
           <PlayQueue />
           <MusicPlayer />
