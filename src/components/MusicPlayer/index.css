@@ -1,0 +1,17 @@
+
+/* NAMING CONVENTION */
+/* https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md */
+
+.MusicPlayer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MusicPlayer.is-stopped {
+  margin: 2rem 0;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  background-color: blue;
+}
