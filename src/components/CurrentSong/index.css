@@ -1,7 +1,35 @@
-.CurrentSong {
-  flex: 1;
 
+/* NAMING CONVENTION */
+/* https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md */
+
+.CurrentSong {
   display: flex;
-  align-items: center;
-  padding: 0 1rem;
+  justify-content: space-around;
+  padding: 1rem;
+
+  background-color: rgba(255, 255,255, 0.05)
+}
+
+.CurrentSong-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: 200%;
+}
+
+.CurrentSong-title {
+  font-weight: bold;
+}
+
+.CurrentSong-artist {
+  font-weight: 200;
+}
+
+.CurrentSong-album {
+  flex-direction: column;
+  text-align: center;
+}
+
+.CurrentSong-albumName {
+  font-size: 75%;
 }
