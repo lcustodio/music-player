@@ -2,6 +2,10 @@
   flex: 5;
 
   display: flex;
+  flex-direction: column;
+  overflow: auto;
 
-  padding: 0 1rem;
+  padding: 1rem;
+
+  max-height: 53vh;
 }

@@ -6,7 +6,7 @@ import CurrentSong from './index';
 describe.only('Current Song', () => {
   it('should handle no song', () => {
     const expected = shallow(<CurrentSong />);
-    expect(expected.html()).toContain('No music is playing');
+    expect(expected.html()).toContain('No music playing');
   });
 
   it('should display artist name', () => {

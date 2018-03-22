@@ -11,7 +11,7 @@ describe('Play Queue List', () => {
 
   it('should render the list of next songs', () => {
     const expected = shallow(<PlayQueue songs={songs()} />);
-    expect(expected.at(0).length).toBe(3);
+    expect(expected.find('.PlayQueue-musicTitle').length).toBe(3);
   });
 
   it('should display artist name', () => {
@@ -30,8 +30,8 @@ describe('Play Queue List', () => {
       <PlayQueue songs={songs()} onMusicSelected={mockCallback} />
     );
     expected
-      .at(0)
-      .at(0)
+      .find('.PlayQueue-container')
+      .at(1)
       .simulate('click');
 
     expect(mockCallback.mock.calls.length).toBe(1);
