@@ -4,8 +4,45 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  /* align-items: baseline; */
 
   padding: 1rem;
-
+  
   max-height: 53vh;
+
+  flex-flow: column nowrap;
+  font-size: 70%;
+
+  width: 100%;
+}
+
+.PlayQueue-header {
+  display: flex;
+}
+
+.PlayQueue-header .line {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 100%;
+}
+
+.PlayQueue-container {
+  margin: 0.5rem 0;
+  display: flex;
+}
+
+.PlayQueue-container:hover  {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  padding-left: -1rem;
+}
+
+.line {
+  flex-grow: 1;
+  flex-basis: 0;
+  padding: 0.5em;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
