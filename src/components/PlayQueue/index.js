@@ -1,5 +1,5 @@
-import React from "react";
-import "./index.css";
+import React from 'react';
+import './index.css';
 
 const PlayQueue = props => {
   if (!props.songs || props.songs.length === 0) {
@@ -8,13 +8,25 @@ const PlayQueue = props => {
 
   return (
     <div className="PlayQueue">
-      {props.songs.map(song => (
-        <div className="PlayQueue-container"key={song.id} onClick={() => props.onMusicSelected(song.id)}>
-          <div className="PlayQueue-musicTitle">{song.title}</div>
-          <div>{song.artist}</div>
-          <div>{song.album}</div>
+      <div>
+        <div className="PlayQueue-header">
+          <div className="line">Title</div>
+          <div className="line">Artist</div>
+          <div className="line">Album</div>
         </div>
-      ))}
+        <div />
+        {props.songs.map(song => (
+          <div
+            className="PlayQueue-container"
+            key={song.id}
+            onClick={() => props.onMusicSelected(song.id)}
+          >
+            <div className="line PlayQueue-musicTitle">{song.title}</div>
+            <div className="line">{song.artist}</div>
+            <div className="line">{song.album}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

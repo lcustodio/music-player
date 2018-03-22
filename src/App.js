@@ -6,8 +6,7 @@ import MusicPlayer from './components/MusicPlayer';
 import './App.css';
 
 class App extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
     this.onMusicSelected = this.onMusicSelected.bind(this);
 
@@ -17,12 +16,12 @@ class App extends Component {
   componentDidMount() {
     const playQueue = Object.assign([], this.props.musics);
     const currentSong = playQueue.shift();
-    this.setState({currentSong, playQueue});
+    this.setState({ currentSong, playQueue });
   }
 
   onMusicSelected(songId) {
-   console.log('music selected');
-  } 
+    console.log('music selected');
+  }
 
   render() {
     return (
@@ -31,9 +30,12 @@ class App extends Component {
           <div className="App-title">Music Player</div>
         </header>
         <main className="App-container">
-          <CurrentSong song={this.state.currentSong}/>
-          <PlayQueue songs={this.state.playQueue} onMusicSelected={this.onMusicSelected}/>
-          <MusicPlayer song={this.state.currentSong}/>
+          <CurrentSong song={this.state.currentSong} />
+          <PlayQueue
+            songs={this.state.playQueue}
+            onMusicSelected={this.onMusicSelected}
+          />
+          <MusicPlayer song={this.state.currentSong} />
         </main>
       </div>
     );
