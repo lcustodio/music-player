@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
-  /* align-items: baseline; */
 
   padding: 1rem;
   
@@ -45,4 +44,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.line.center {
+  text-align: center;
 }

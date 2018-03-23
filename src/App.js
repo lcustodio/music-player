@@ -9,6 +9,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.onMusicSelected = this.onMusicSelected.bind(this);
+    this.onNextSong = this.onNextSong.bind(this);
 
     this.state = {};
   }
@@ -20,7 +21,16 @@ class App extends Component {
   }
 
   onMusicSelected(songId) {
-    console.log('music selected');
+    const playQueue = Object.assign([], this.state.playQueue);
+    const songIndex = playQueue.findIndex(item => item.id === songId);
+    const currentSong = playQueue.splice(songIndex, 1)[0];
+    this.setState({ currentSong, playQueue });
+  }
+
+  onNextSong(songId) {
+    const playQueue = Object.assign([], this.state.playQueue);
+    const currentSong = playQueue.shift();
+    this.setState({ currentSong, playQueue });
   }
 
   render() {
@@ -35,7 +45,10 @@ class App extends Component {
             songs={this.state.playQueue}
             onMusicSelected={this.onMusicSelected}
           />
-          <MusicPlayer song={this.state.currentSong} />
+          <MusicPlayer
+            music={this.state.currentSong}
+            nextSong={this.onNextSong}
+          />
         </main>
       </div>
     );
