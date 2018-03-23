@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 
 import CurrentSong from './index';
 
-describe.only('Current Song', () => {
+describe('Current Song', () => {
   it('should handle no song', () => {
     const expected = shallow(<CurrentSong />);
     expect(expected.html()).toContain('No music playing');
